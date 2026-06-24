@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumna Tribu — Reconnexion. Ancrage. Bienveillance.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --creme:     #F7F3EE;
+      --creme-deep:#EDE6DC;
+      --terre:     #C4A882;
+      --terre-deep:#9C7E5A;
+      --nuit:      #2B2620;
+      --nuit-soft: #4A3F35;
+      --or:        #D4AF72;
+      --blanc:     #FDFAF6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--blanc);
+      color: var(--nuit);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      background: rgba(253,250,246,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196,168,130,0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--nuit);
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--terre);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--nuit-soft);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--terre); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      background: var(--blanc);
+      overflow: hidden;
+    }
+
+    /* Cercles concentriques — signature visuelle */
+    .hero-circles {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 800px;
+      pointer-events: none;
+    }
+
+    .hero-circles circle {
+      fill: none;
+      stroke: var(--terre);
+      animation: pulse-ring 6s ease-in-out infinite;
+    }
+
+    .hero-circles circle:nth-child(1) { stroke-width: 0.4; opacity: 0.12; animation-delay: 0s; }
+    .hero-circles circle:nth-child(2) { stroke-width: 0.3; opacity: 0.08; animation-delay: 1s; }
+    .hero-circles circle:nth-child(3) { stroke-width: 0.2; opacity: 0.05; animation-delay: 2s; }
+
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1); opacity: 0.12; }
+      50%       { transform: scale(1.04); opacity: 0.06; }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fadein 1s ease forwards 0.3s;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      color: var(--nuit);
+      margin-bottom: 0.3rem;
+      opacity: 0;
+      animation: fadein 1s ease forwards 0.6s;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--terre);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--nuit-soft);
+      margin-bottom: 2.8rem;
+      opacity: 0;
+      animation: fadein 1s ease forwards 0.9s;
+    }
+
+    .hero-intro {
+      max-width: 520px;
+      font-size: 1rem;
+      color: var(--nuit-soft);
+      line-height: 1.9;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadein 1s ease forwards 1.2s;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      border: 1px solid var(--terre);
+      color: var(--terre);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      opacity: 0;
+      animation: fadein 1s ease forwards 1.5s;
+    }
+
+    .btn-primary:hover {
+      background: var(--terre);
+      color: var(--blanc);
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── ANCRAGE ── */
+    .section {
+      padding: 7rem 2rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--nuit);
+      margin-bottom: 1.8rem;
+    }
+
+    .section-title em { font-style: italic; color: var(--terre); }
+
+    .section-text {
+      font-size: 1rem;
+      color: var(--nuit-soft);
+      line-height: 1.9;
+      max-width: 580px;
+    }
+
+    /* ── MANIFESTE ── */
+    .manifeste {
+      background: var(--nuit);
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .manifeste-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--creme);
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .manifeste-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--or);
+    }
+
+    /* ── OFFRES ── */
+    .offres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .offre-card {
+      border: 1px solid rgba(196,168,130,0.25);
+      padding: 2.5rem 2rem;
+      background: var(--blanc);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .offre-card:hover {
+      border-color: var(--terre);
+      transform: translateY(-4px);
+    }
+
+    .offre-icon {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .offre-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--nuit);
+      margin-bottom: 0.8rem;
+    }
+
+    .offre-name em { font-style: italic; color: var(--terre); }
+
+    .offre-desc {
+      font-size: 0.92rem;
+      color: var(--nuit-soft);
+      line-height: 1.8;
+    }
+
+    /* ── SCIENCE ── */
+    .science {
+      background: var(--creme-deep);
+      padding: 7rem 2rem;
+    }
+
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .science-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--terre);
+      line-height: 1;
+      min-width: 80px;
+    }
+
+    .stat-label {
+      font-size: 0.88rem;
+      color: var(--nuit-soft);
+      line-height: 1.7;
+      padding-top: 0.3rem;
+    }
+
+    /* ── TRIBU ── */
+    .tribu {
+      padding: 7rem 2rem;
+      text-align: center;
+    }
+
+    .tribu-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--nuit-soft);
+      max-width: 620px;
+      margin: 1.5rem auto 3rem;
+      line-height: 1.7;
+    }
+
+    .tribu-valeurs {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .valeur {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .valeur-mot {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--terre);
+    }
+
+    .valeur-trait {
+      width: 1px;
+      height: 40px;
+      background: var(--terre);
+      opacity: 0.3;
+    }
+
+    .valeur-desc {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--nuit-soft);
+    }
+
+    /* ── NAGOMI ── */
+    .nagomi {
+      background: var(--nuit);
+      padding: 8rem 2rem;
+    }
+
+    .nagomi-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .nagomi-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: 1rem;
+    }
+
+    .nagomi-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: var(--creme);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .nagomi-title em { font-style: italic; color: var(--or); }
+
+    .nagomi-text {
+      font-size: 0.95rem;
+      color: rgba(247,243,238,0.7);
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .nagomi-programme {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nagomi-programme li {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      color: rgba(247,243,238,0.65);
+      line-height: 1.6;
+    }
+
+    .nagomi-programme li::before {
+      content: '—';
+      color: var(--or);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 8rem 2rem;
+      text-align: center;
+      background: var(--creme);
+    }
+
+    .contact-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--nuit);
+      margin-bottom: 1rem;
+    }
+
+    .contact-title em { font-style: italic; color: var(--terre); }
+
+    .contact-sub {
+      font-size: 0.95rem;
+      color: var(--nuit-soft);
+      margin-bottom: 2.5rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-email {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--terre);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196,168,130,0.4);
+      padding-bottom: 2px;
+      transition: border-color 0.3s;
+    }
+
+    .contact-email:hover { border-color: var(--terre); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.5rem;
+      text-align: center;
+      background: var(--nuit);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: rgba(247,243,238,0.35);
+    }
+
+    footer span { color: var(--or); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--terre);
+      margin: 1.5rem 0;
+      opacity: 0.5;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .science-grid, .nagomi-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .tribu-valeurs { gap: 2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">LUMNA <span>Tribu</span></a>
+    <ul class="nav-links">
+      <li><a href="#ancrage">L'espace</a></li>
+      <li><a href="#offres">Ce que nous proposons</a></li>
+      <li><a href="#nagomi">Nagomi</a></li>
+      <li><a href="#contact">Nous rejoindre</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero-circles" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="400" cy="400" r="360"/>
+      <circle cx="400" cy="400" r="280"/>
+      <circle cx="400" cy="400" r="200"/>
+    </svg>
+    <p class="hero-eyebrow">Lumna Tribu · Reconnexion. Ancrage. Bienveillance.</p>
+    <h1 class="hero-title">La lumière<br><em>était en toi.</em></h1>
+    <p class="hero-subtitle">Elle l'est encore.</p>
+    <p class="hero-intro">
+      Un espace où les femmes se retrouvent. Pas pour performer leur guérison, 
+      mais pour poser ce qu'elles portent, respirer, et se souvenir qu'elles ne sont pas seules.
+    </p>
+    <a href="#ancrage" class="btn-primary">Entrer dans l'espace</a>
+  </section>
+
+  <!-- ANCRAGE -->
+  <section class="section" id="ancrage">
+    <div class="container reveal">
+      <p class="section-label">Ce que nous sommes</p>
+      <h2 class="section-title">Un lieu qui<br><em>ne juge pas.</em></h2>
+      <div class="divider"></div>
+      <p class="section-text">
+        Lumna Tribu est né d'un constat simple : certaines femmes portent une charge qu'aucun être humain 
+        ne devrait porter seul. Qu'on l'ait traversé hier ou il y a vingt ans — le corps s'en souvient, 
+        lui. Ici, on ne vous demande pas d'expliquer. On vous invite à vous déposer.
+      </p>
+      <br/>
+      <p class="section-text">
+        À travers les voyages sonores, les espaces de parole et les journées de reconnexion à soi, 
+        nous créons les conditions pour que votre système nerveux retrouve ce qu'il a peut-être oublié : 
+        la sécurité.
+      </p>
+    </div>
+  </section>
+
+  <!-- MANIFESTE -->
+  <section class="manifeste">
+    <p class="manifeste-quote reveal">
+      « Comprendre ce que l'on vit permet souvent d'arrêter de croire que l'on est le problème. »
+    </p>
+    <p class="manifeste-sub reveal">— Au cœur de Lumna Tribu</p>
+  </section>
+
+  <!-- OFFRES -->
+  <section class="section" id="offres">
+    <div class="container">
+      <p class="section-label reveal">Ce que nous proposons</p>
+      <h2 class="section-title reveal">Des espaces<br><em>à votre mesure.</em></h2>
+      <div class="offres-grid">
+
+        <div class="offre-card reveal">
+          <div class="offre-icon">◎</div>
+          <p class="offre-name"><em>Voyages sonores</em></p>
+          <p class="offre-desc">
+            Bols tibétains et gongs. Le son traverse là où les mots ne vont pas. 
+            Une invitation à lâcher prise sans effort, guidée par la vibration.
+          </p>
+        </div>
+
+        <div class="offre-card reveal">
+          <div class="offre-icon">◇</div>
+          <p class="offre-name"><em>Nagomi</em> — la journée</p>
+          <p class="offre-desc">
+            Une journée entière pour vous. Science du système nerveux, reconnexion au corps, 
+            voyage sonore, et un rituel pour repartir avec quelque chose de tangible.
+          </p>
+        </div>
+
+        <div class="offre-card reveal">
+          <div class="offre-icon">○</div>
+          <p class="offre-name">La <em>Tribu</em></p>
+          <p class="offre-desc">
+            Des femmes qui se retrouvent. Des cercles où l'on peut dire ce que l'on ne dit 
+            nulle part ailleurs — ou ne rien dire du tout. Juste être là, ensemble.
+          </p>
+        </div>
+
+        <div class="offre-card reveal">
+          <div class="offre-icon">✦</div>
+          <p class="offre-name">Accompagnement <em>sur-mesure</em></p>
+          <p class="offre-desc">
+            Partenariats avec des structures de soin, hôtels de bien-être, et lieux qui 
+            souhaitent offrir à leurs équipes ou leurs résidentes un espace de soin différent.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="science" id="science">
+    <div class="container">
+      <div class="science-grid">
+        <div class="reveal">
+          <p class="section-label">Ce que dit la science</p>
+          <h2 class="section-title">Le son agit<br><em>en profondeur.</em></h2>
+          <div class="divider"></div>
+          <p class="section-text">
+            Le soin sonore n'est pas une pratique ésotérique. C'est une approche ancrée 
+            dans la physiologie du système nerveux autonome — celle que vivent les corps 
+            qui ont longtemps été en état d'alerte.
+          </p>
+        </div>
+        <div class="science-stat reveal">
+          <div class="stat-item">
+            <span class="stat-num">~70%</span>
+            <span class="stat-label">du corps humain est composé d'eau — un milieu conducteur idéal pour la propagation des vibrations sonores</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4–8 Hz</span>
+            <span class="stat-label">ondes thêta induites par les fréquences des bols — associées à la relaxation profonde et à la régulation du cortisol</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">↓</span>
+            <span class="stat-label">réduction mesurable du cortisol salivaire après une séance de soin sonore, selon plusieurs études en neurosciences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIBU -->
+  <section class="tribu" id="tribu">
+    <div class="container reveal">
+      <p class="section-label">Pourquoi Tribu</p>
+      <h2 class="section-title">On guérit rarement <em>seule.</em></h2>
+      <p class="tribu-text">
+        La tribu, c'est la famille qu'on choisit. Celle où l'on n'a pas besoin de mériter sa place. 
+        Où l'on peut arriver abîmée et repartir un peu plus entière — pas parce qu'on a tout résolu, 
+        mais parce qu'on a été vue.
+      </p>
+      <div class="tribu-valeurs">
+        <div class="valeur">
+          <span class="valeur-mot">Sécurité</span>
+          <div class="valeur-trait"></div>
+          <span class="valeur-desc">sans condition</span>
+        </div>
+        <div class="valeur">
+          <span class="valeur-mot">Douceur</span>
+          <div class="valeur-trait"></div>
+          <span class="valeur-desc">comme point de départ</span>
+        </div>
+        <div class="valeur">
+          <span class="valeur-mot">Présence</span>
+          <div class="valeur-trait"></div>
+          <span class="valeur-desc">à soi et aux autres</span>
+        </div>
+        <div class="valeur">
+          <span class="valeur-mot">Ancrage</span>
+          <div class="valeur-trait"></div>
+          <span class="valeur-desc">dans le corps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAGOMI -->
+  <section class="nagomi" id="nagomi">
+    <div class="nagomi-inner">
+      <div class="reveal">
+        <p class="nagomi-label">La journée signature</p>
+        <h2 class="nagomi-title"><em>Nagomi</em><br>L'apaisement<br>intérieur.</h2>
+        <p class="nagomi-text">
+          Nagomi — mot japonais qui désigne la paix profonde, l'harmonie retrouvée. 
+          Une journée entière, entre 9h et 15h, pour revenir à soi pas à pas. 
+          Pas de performance. Pas d'injonction à aller mieux. Juste un espace 
+          où votre corps peut enfin souffler.
+        </p>
+        <a href="#contact" class="btn-primary" style="border-color: var(--or); color: var(--or);">
+          Rejoindre un Nagomi
+        </a>
+      </div>
+      <ul class="nagomi-programme reveal">
+        <li>Accueil en douceur pour comprendre ce que vit votre système nerveux</li>
+        <li>Ancrage corporel — revenir dans son corps sans forcer</li>
+        <li>Voyage sonore guidé — bols tibétains et gongs</li>
+        <li>Temps de parole — ce qui veut être dit, sans obligation</li>
+        <li>Rituel d'ancrage pour repartir avec quelque chose de tangible</li>
+        <li>Clôture en cercle — ensemble, avant de retrouver le dehors</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container reveal">
+      <p class="section-label">Nous rejoindre</p>
+      <h2 class="contact-title">Vous avez<br><em>votre place ici.</em></h2>
+      <p class="contact-sub">
+        Pour une séance, une journée Nagomi, ou simplement pour poser une question 
+        sans engagement — écrivez-nous.
+      </p>
+      <a href="mailto:contact@lumnatribu.fr" class="contact-email">contact@lumnatribu.fr</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <span>Lumna Tribu</span> · Reconnexion. Ancrage. Bienveillance. · Tous droits réservés</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
