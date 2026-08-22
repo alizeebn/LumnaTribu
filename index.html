@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lumna Tribu — Reconnexion. Ancrage. Bienveillance.</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -208,6 +209,20 @@
     .container {
       max-width: 960px;
       margin: 0 auto;
+    }
+
+    .ancrage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .ancrage-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
     }
 
     .section-label {
@@ -540,7 +555,7 @@
     @media (max-width: 768px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { display: none; }
-      .science-grid, .nagomi-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .science-grid, .nagomi-inner, .ancrage-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .tribu-valeurs { gap: 2rem; }
     }
 
@@ -581,21 +596,28 @@
 
   <!-- ANCRAGE -->
   <section class="section" id="ancrage">
-    <div class="container reveal">
-      <p class="section-label">Ce que nous sommes</p>
-      <h2 class="section-title">Un lieu qui<br><em>ne juge pas.</em></h2>
-      <div class="divider"></div>
-      <p class="section-text">
-        Lumna Tribu est né d'un constat simple : certaines femmes portent une charge qu'aucun être humain 
-        ne devrait porter seul. Qu'on l'ait traversé hier ou il y a vingt ans — le corps s'en souvient, 
-        lui. Ici, on ne vous demande pas d'expliquer. On vous invite à vous déposer.
-      </p>
-      <br/>
-      <p class="section-text">
-        À travers les voyages sonores, les espaces de parole et les journées de reconnexion à soi, 
-        nous créons les conditions pour que votre système nerveux retrouve ce qu'il a peut-être oublié : 
-        la sécurité.
-      </p>
+    <div class="container">
+      <div class="ancrage-grid">
+        <div class="reveal">
+          <p class="section-label">Ce que nous sommes</p>
+          <h2 class="section-title">Un lieu qui<br><em>ne juge pas.</em></h2>
+          <div class="divider"></div>
+          <p class="section-text">
+            Lumna Tribu est né d'un constat simple : certaines femmes portent une charge qu'aucun être humain
+            ne devrait porter seul. Qu'on l'ait traversé hier ou il y a vingt ans — le corps s'en souvient,
+            lui. Ici, on ne vous demande pas d'expliquer. On vous invite à vous déposer.
+          </p>
+          <br/>
+          <p class="section-text">
+            À travers les voyages sonores, les espaces de parole et les journées de reconnexion à soi,
+            nous créons les conditions pour que votre système nerveux retrouve ce qu'il a peut-être oublié :
+            la sécurité.
+          </p>
+        </div>
+        <div class="ancrage-photo reveal">
+          <img src="assets/ancrage-photo.jpg" alt="Femme de dos portant un collier lune Lumna Tribu" />
+        </div>
+      </div>
     </div>
   </section>
 
