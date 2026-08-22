@@ -46,6 +46,8 @@
     }
 
     .nav-logo {
+      display: flex;
+      align-items: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.5rem;
       font-weight: 400;
@@ -57,6 +59,12 @@
     .nav-logo span {
       color: var(--terre);
       font-style: italic;
+    }
+
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -545,7 +553,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">LUMNA <span>Tribu</span></a>
+    <a href="#" class="nav-logo"><img src="assets/lumna-logo.png" alt="Lumna Tribu" class="nav-logo-img" /></a>
     <ul class="nav-links">
       <li><a href="#ancrage">L'espace</a></li>
       <li><a href="#offres">Ce que nous proposons</a></li>
@@ -749,7 +757,7 @@
         Pour une séance, une journée Nagomi, ou simplement pour poser une question 
         sans engagement — écrivez-nous.
       </p>
-      <a href="mailto:lumnatribu.contact@gmail.com" class="contact-email">contact@lumnatribu.com</a>
+      <a href="mailto:contact@lumnatribu.com" class="contact-email">contact@lumnatribu.com</a>
     </div>
   </section>
 
