@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal — Lumna Tribu</title>
+  <meta name="description" content="Les journées Nagomi, la régulation du système nerveux et la mission de Lumna Tribu : le journal du centre de soin sonore pour femmes à Aix-en-Provence." />
+  <meta name="keywords" content="journal Lumna Tribu, journée Nagomi, soin sonore, régulation du système nerveux, bien-être femmes Aix-en-Provence" />
+  <link rel="canonical" href="https://lumnatribu.com/blog/" />
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://lumnatribu.com/blog/" />
+  <meta property="og:site_name" content="Lumna Tribu" />
+  <meta property="og:title" content="Journal — Lumna Tribu" />
+  <meta property="og:description" content="Les journées Nagomi, la régulation du système nerveux et la mission de Lumna Tribu : le journal du centre de soin sonore pour femmes." />
+  <meta property="og:image" content="https://lumnatribu.com/assets/ancrage-photo.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Journal — Lumna Tribu" />
+  <meta name="twitter:description" content="Les journées Nagomi, la régulation du système nerveux et la mission de Lumna Tribu." />
+  <meta name="twitter:image" content="https://lumnatribu.com/assets/ancrage-photo.jpg" />
+
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Journal — Lumna Tribu",
+    "url": "https://lumnatribu.com/blog/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumna Tribu",
+      "logo": "https://lumnatribu.com/assets/lumna-logo.png"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Le but de Lumna Tribu : offrir un espace où l'on peut enfin se déposer",
+        "url": "https://lumnatribu.com/blog/le-but-de-lumna-tribu.html"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "La journée Nagomi : à quoi ressemble une journée chez Lumna Tribu",
+        "url": "https://lumnatribu.com/blog/journee-nagomi-deroule.html"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Pourquoi participer à une journée Nagomi ? Le sens derrière cette pause",
+        "url": "https://lumnatribu.com/blog/pourquoi-journee-nagomi.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --creme:     #F7F3EE;
+      --creme-deep:#EDE6DC;
+      --terre:     #C4A882;
+      --terre-deep:#9C7E5A;
+      --nuit:      #2B2620;
+      --nuit-soft: #4A3F35;
+      --or:        #D4AF72;
+      --blanc:     #FDFAF6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--blanc);
+      color: var(--nuit);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      background: rgba(253,250,246,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196,168,130,0.15);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--nuit-soft);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--terre); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 10rem 2rem 4rem;
+      text-align: center;
+      background: var(--blanc);
+    }
+
+    .page-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1.4rem;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--nuit);
+      margin-bottom: 1.4rem;
+    }
+
+    .page-title em { font-style: italic; color: var(--terre); }
+
+    .page-intro {
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: var(--nuit-soft);
+      line-height: 1.9;
+    }
+
+    /* ── BLOG GRID ── */
+    .section { padding: 3rem 2rem 7rem; }
+
+    .container { max-width: 960px; margin: 0 auto; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(196,168,130,0.25);
+      padding: 2.5rem 2rem;
+      background: var(--blanc);
+      text-decoration: none;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .blog-card:hover {
+      border-color: var(--terre);
+      transform: translateY(-4px);
+    }
+
+    .blog-card-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1rem;
+    }
+
+    .blog-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--nuit);
+      line-height: 1.3;
+      margin-bottom: 0.9rem;
+    }
+
+    .blog-card-title em { font-style: italic; color: var(--terre); }
+
+    .blog-card-excerpt {
+      font-size: 0.9rem;
+      color: var(--nuit-soft);
+      line-height: 1.8;
+      margin-bottom: 1.6rem;
+      flex-grow: 1;
+    }
+
+    .blog-card-cta {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terre-deep);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.5rem;
+      text-align: center;
+      background: var(--nuit);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: rgba(247,243,238,0.35);
+    }
+
+    footer span { color: var(--or); }
+    footer a { color: rgba(247,243,238,0.55); text-decoration: none; }
+    footer a:hover { color: var(--or); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../" class="nav-logo"><img src="../assets/lumna-logo.png" alt="Lumna Tribu" class="nav-logo-img" /></a>
+    <ul class="nav-links">
+      <li><a href="../#ancrage">L'espace</a></li>
+      <li><a href="../#offres">Ce que nous proposons</a></li>
+      <li><a href="../#nagomi">Nagomi</a></li>
+      <li><a href="./" class="active">Journal</a></li>
+      <li><a href="../#contact">Nous rejoindre</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <p class="page-eyebrow">Lumna Tribu · Journal</p>
+    <h1 class="page-title">Des mots pour<br><em>ce que le corps porte.</em></h1>
+    <p class="page-intro">
+      Le but des journées Nagomi, leur déroulé, et ce qui anime Lumna Tribu au quotidien —
+      quelques articles pour mieux comprendre l'espace que nous créons.
+    </p>
+  </header>
+
+  <!-- BLOG GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <a href="le-but-de-lumna-tribu.html" class="blog-card reveal">
+          <p class="blog-card-label">Mission</p>
+          <p class="blog-card-title">Le but de <em>Lumna Tribu</em></p>
+          <p class="blog-card-excerpt">
+            Pourquoi ce centre de soin sonore et de régulation du système nerveux existe,
+            et pour qui il a été pensé.
+          </p>
+          <span class="blog-card-cta">Lire l'article →</span>
+        </a>
+
+        <a href="journee-nagomi-deroule.html" class="blog-card reveal">
+          <p class="blog-card-label">Nagomi</p>
+          <p class="blog-card-title">Le déroulé d'une journée <em>Nagomi</em></p>
+          <p class="blog-card-excerpt">
+            De l'accueil à 9h au cercle de clôture à 15h : ce qui se vit, heure par heure,
+            pendant une journée Nagomi.
+          </p>
+          <span class="blog-card-cta">Lire l'article →</span>
+        </a>
+
+        <a href="pourquoi-journee-nagomi.html" class="blog-card reveal">
+          <p class="blog-card-label">Nagomi</p>
+          <p class="blog-card-title">Pourquoi participer à une journée <em>Nagomi</em></p>
+          <p class="blog-card-excerpt">
+            Le sens derrière cette pause : pas guérir vite, mais offrir au corps un vrai espace
+            pour respirer.
+          </p>
+          <span class="blog-card-cta">Lire l'article →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>Lumna Tribu</span> · Reconnexion. Ancrage. Bienveillance. · <a href="../">Retour à l'accueil</a></p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
