@@ -35,6 +35,11 @@
     "image": "https://lumnatribu.com/assets/ancrage-photo.jpg",
     "logo": "https://lumnatribu.com/assets/lumna-logo.png",
     "email": "contact@lumnatribu.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Alizée",
+      "jobTitle": "Infirmière diplômée d'État"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Aix-en-Provence",
@@ -288,6 +293,33 @@
       height: auto;
       display: block;
       border-radius: 2px;
+    }
+
+    .fondatrice-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .fondatrice-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.8rem;
+    }
+
+    .fondatrice-badge {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terre-deep);
+      border: 1px solid rgba(196, 168, 130, 0.4);
+      padding: 0.55rem 1rem;
+      border-radius: 2px;
+      white-space: nowrap;
     }
 
     .section-label {
@@ -803,6 +835,45 @@
           <span class="valeur-mot">Ancrage</span>
           <div class="valeur-trait"></div>
           <span class="valeur-desc">dans le corps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONDATRICE -->
+  <section class="section" id="fondatrice">
+    <div class="container">
+      <div class="ancrage-grid fondatrice-grid">
+        <div class="fondatrice-photo reveal">
+          <img src="assets/alizee-photo.jpg" alt="Alizée, infirmière diplômée d'État et fondatrice de Lumna Tribu" />
+        </div>
+        <div class="reveal">
+          <p class="section-label">Derrière Lumna Tribu</p>
+          <h2 class="section-title">Une femme qui<br><em>a vécu ce qu'elle soigne.</em></h2>
+          <div class="divider"></div>
+          <p class="section-text">
+            Je m'appelle Alizée. Infirmière diplômée d'État depuis 2019, j'ai commencé mon parcours
+            en réanimation pédiatrique, avant de me tourner vers la prévention santé. Deux univers
+            différents, mais un même fil rouge&nbsp;: prendre soin, vraiment, au-delà des gestes techniques.
+          </p>
+          <br/>
+          <p class="section-text">
+            Il y a quelques années, j'ai traversé une période de ma vie qui a tout bousculé. En avançant,
+            j'ai compris une chose&nbsp;: je n'étais pas seule. Beaucoup de femmes vivent, à un moment ou
+            un autre, des épreuves similaires — souvent en silence, souvent démunies.
+          </p>
+          <br/>
+          <p class="section-text">
+            La parole se libère, et c'est une bonne nouvelle. Mais nommer ne suffit pas toujours. Il existe
+            un espace que même les structures les plus essentielles ne peuvent pas toujours offrir&nbsp;:
+            le temps de déposer, un lieu sûr, un lien vrai avec d'autres qui comprennent sans qu'on ait
+            besoin de tout expliquer. C'est cet espace que j'ai voulu créer avec Lumna Tribu.
+          </p>
+          <div class="fondatrice-badges">
+            <span class="fondatrice-badge">Infirmière diplômée d'État</span>
+            <span class="fondatrice-badge">Maman</span>
+            <span class="fondatrice-badge">Fondatrice de Lumna Tribu</span>
+          </div>
         </div>
       </div>
     </div>
