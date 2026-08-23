@@ -35,6 +35,7 @@
     "image": "https://lumnatribu.com/assets/ancrage-photo.jpg",
     "logo": "https://lumnatribu.com/assets/lumna-logo.png",
     "email": "contact@lumnatribu.com",
+    "telephone": "+33604169778",
     "founder": {
       "@type": "Person",
       "name": "Alizée",
@@ -54,7 +55,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Journée Nagomi",
-          "description": "Une journée entière de reconnexion à soi pour les femmes : ancrage corporel, voyage sonore guidé, temps de parole et rituel d'ancrage, entre 9h et 15h."
+          "description": "Une journée entière de reconnexion à soi pour les femmes : ancrage corporel, voyage sonore guidé, temps de parole et rituel d'ancrage."
         }
       },
       {
@@ -615,6 +616,29 @@
 
     .contact-email:hover { border-color: var(--terre); }
 
+    .contact-links {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      color: var(--nuit-soft);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .contact-link:hover { color: var(--terre); border-color: rgba(196,168,130,0.4); }
+
+    .contact-sep { color: rgba(196,168,130,0.5); font-size: 0.85rem; }
+
     /* ── FOOTER ── */
     footer {
       padding: 2.5rem;
@@ -888,7 +912,7 @@
         <h2 class="nagomi-title"><em>Nagomi</em><br>L'apaisement<br>intérieur.</h2>
         <p class="nagomi-text">
           Nagomi — mot japonais qui désigne la paix profonde, l'harmonie retrouvée. 
-          Une journée entière, entre 9h et 15h, pour revenir à soi pas à pas. 
+          Une journée entière pour revenir à soi pas à pas.
           Pas de performance. Pas d'injonction à aller mieux. Juste un espace 
           où votre corps peut enfin souffler.
         </p>
@@ -917,6 +941,11 @@
         sans engagement — écrivez-nous.
       </p>
       <a href="mailto:contact@lumnatribu.com" class="contact-email">contact@lumnatribu.com</a>
+      <div class="contact-links">
+        <a href="tel:+33604169778" class="contact-link">+33 6 04 16 97 78</a>
+        <span class="contact-sep">·</span>
+        <a href="https://www.instagram.com/lumnatribu" class="contact-link" target="_blank" rel="noopener">@lumnatribu</a>
+      </div>
     </div>
   </section>
 
