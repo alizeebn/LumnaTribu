@@ -637,6 +637,14 @@
 
     .contact-link:hover { color: var(--terre); border-color: rgba(196,168,130,0.4); }
 
+    .contact-link-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-link-insta svg { flex-shrink: 0; }
+
     .contact-sep { color: rgba(196,168,130,0.5); font-size: 0.85rem; }
 
     /* ── FOOTER ── */
@@ -944,7 +952,14 @@
       <div class="contact-links">
         <a href="tel:+33604169778" class="contact-link">+33 6 04 16 97 78</a>
         <span class="contact-sep">·</span>
-        <a href="https://www.instagram.com/lumnatribu" class="contact-link" target="_blank" rel="noopener">@lumnatribu</a>
+        <a href="https://www.instagram.com/lumnatribu" class="contact-link contact-link-insta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+            <circle cx="12" cy="12" r="4.6"></circle>
+            <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"></circle>
+          </svg>
+          @lumnatribu
+        </a>
       </div>
     </div>
   </section>
