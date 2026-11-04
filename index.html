@@ -472,6 +472,48 @@
       padding-top: 0.3rem;
     }
 
+    /* ── ÉTUDES ── */
+    .etudes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.6rem;
+      margin-top: 1rem;
+    }
+
+    .etude-card {
+      background: var(--blanc);
+      border: 1px solid rgba(196,168,130,0.25);
+      padding: 1.8rem 1.6rem;
+    }
+
+    .etude-type {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terre-deep);
+      margin-bottom: 0.8rem;
+    }
+
+    .etude-text {
+      font-size: 0.88rem;
+      color: var(--nuit-soft);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .etude-source {
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      color: var(--terre);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196,168,130,0.4);
+      padding-bottom: 1px;
+    }
+
+    .etude-source:hover { color: var(--terre-deep); }
+
     /* ── TRIBU ── */
     .tribu {
       padding: 7rem 2rem;
@@ -852,6 +894,57 @@
           </div>
         </div>
       </div>
+
+      <div class="divider reveal" style="margin: 3.5rem auto 2rem;"></div>
+      <p class="section-label reveal" style="text-align:center;">Ce que montrent les études</p>
+
+      <div class="etudes-grid">
+        <div class="etude-card reveal">
+          <p class="etude-type">Essai randomisé contrôlé · 2023</p>
+          <p class="etude-text">
+            Une seule séance de bols tibétains produit une réponse de relaxation plus marquée qu'une séance de
+            relaxation musculaire progressive ou qu'un simple temps d'attente&nbsp;: variabilité cardiaque et
+            activité cérébrale (EEG) le confirment, et l'anxiété ressentie repasse sous le seuil clinique.
+          </p>
+          <a href="https://mdpi.com/2254-9625/13/2/24" target="_blank" rel="noopener" class="etude-source">European Journal of Investigation in Health, Psychology and Education →</a>
+        </div>
+
+        <div class="etude-card reveal">
+          <p class="etude-type">Synthèse de 19 études cliniques · 2025</p>
+          <p class="etude-text">
+            Une revue systématique portant sur 19 études menées dans 8 pays conclut que les bols chantants
+            pourraient aider à réduire l'anxiété et la dépression, et à améliorer la qualité du sommeil.
+          </p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12063014/" target="_blank" rel="noopener" class="etude-source">Integrative Medicine Research →</a>
+        </div>
+
+        <div class="etude-card reveal">
+          <p class="etude-type">Étude observationnelle · 2016</p>
+          <p class="etude-text">
+            Après une séance de bain sonore d'environ une heure, les participants rapportent une baisse marquée
+            de la tension, de la colère et de la fatigue ressenties, ainsi qu'une anxiété en net recul.
+          </p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/27694559/" target="_blank" rel="noopener" class="etude-source">Journal of Evidence-Based Complementary & Alternative Medicine →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENCIATION -->
+  <section class="section" id="difference" style="background: var(--creme-deep);">
+    <div class="container" style="max-width:720px; text-align:center;">
+      <p class="section-label reveal">La différence</p>
+      <h2 class="section-title reveal">Aucun effort<br><em>à fournir.</em></h2>
+      <div class="divider reveal" style="margin: 1.5rem auto;"></div>
+      <p class="section-text reveal" style="margin: 0 auto;">
+        Contrairement à l'hypnose, à la sophrologie ou à la relaxation musculaire progressive — qui demandent
+        de suivre une voix, une consigne, une succession d'étapes — le bain sonore ne demande rien. Vous vous
+        allongez, et c'est tout. Pas de visualisation à tenir, pas de respiration à compter, pas d'étape à
+        suivre. Vous laissez votre corps et votre tête recevoir ce qui s'y passe, sans effort ni réflexion.
+        D'ailleurs, dans l'étude de 2023 citée plus haut, une seule séance de bols tibétains a produit une
+        relaxation plus marquée qu'une séance de relaxation musculaire progressive — où il faut activement
+        contracter puis relâcher chaque groupe musculaire sur consigne.
+      </p>
     </div>
   </section>
 
