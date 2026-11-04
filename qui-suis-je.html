@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qui suis-je — Alizée Bonillo, fondatrice de Lumna Tribu</title>
+  <meta name="description" content="Alizée Bonillo, infirmière diplômée d'État et fondatrice de Lumna Tribu : son parcours, ce qui l'a menée à créer des espaces de reconnexion pour les femmes." />
+  <meta name="keywords" content="Alizée Bonillo, fondatrice Lumna Tribu, infirmière diplômée d'État, qui suis-je, parcours" />
+  <link rel="canonical" href="https://lumnatribu.com/qui-suis-je" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://lumnatribu.com/qui-suis-je" />
+  <meta property="og:site_name" content="Lumna Tribu" />
+  <meta property="og:title" content="Qui suis-je — Alizée Bonillo, fondatrice de Lumna Tribu" />
+  <meta property="og:description" content="Infirmière diplômée d'État et fondatrice de Lumna Tribu : le parcours derrière le projet." />
+  <meta property="og:image" content="https://lumnatribu.com/assets/alizee-photo.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Qui suis-je — Alizée Bonillo, fondatrice de Lumna Tribu" />
+  <meta name="twitter:description" content="Infirmière diplômée d'État et fondatrice de Lumna Tribu : le parcours derrière le projet." />
+  <meta name="twitter:image" content="https://lumnatribu.com/assets/alizee-photo.jpg" />
+
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Qui suis-je — Alizée Bonillo",
+    "url": "https://lumnatribu.com/qui-suis-je",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Alizée Bonillo",
+      "jobTitle": "Infirmière diplômée d'État",
+      "description": "Fondatrice de Lumna Tribu, infirmière diplômée d'État depuis 2019.",
+      "sameAs": [
+        "https://www.instagram.com/alizeebonillo"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Lumna Tribu",
+        "url": "https://lumnatribu.com/"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --creme:     #F7F3EE;
+      --creme-deep:#EDE6DC;
+      --terre:     #C4A882;
+      --terre-deep:#9C7E5A;
+      --nuit:      #2B2620;
+      --nuit-soft: #4A3F35;
+      --or:        #D4AF72;
+      --blanc:     #FDFAF6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--blanc);
+      color: var(--nuit);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      background: rgba(253,250,246,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(196,168,130,0.15);
+    }
+
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img { height: 44px; width: auto; display: block; }
+
+    .nav-links { display: flex; gap: 1.9rem; list-style: none; }
+
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--nuit-soft);
+      text-decoration: none;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--terre); }
+
+    .article-header {
+      padding: 10rem 2rem 3rem;
+      text-align: center;
+      background: var(--blanc);
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terre-deep);
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+
+    .back-link:hover { color: var(--terre); }
+
+    .article-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1.4rem;
+    }
+
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--nuit);
+      max-width: 820px;
+      margin: 0 auto 1.4rem;
+    }
+
+    .article-title em { font-style: italic; color: var(--terre); }
+
+    .article-meta {
+      font-size: 0.8rem;
+      color: var(--nuit-soft);
+      opacity: 0.7;
+      letter-spacing: 0.05em;
+    }
+
+    .section { padding: 3rem 2rem 6rem; }
+
+    .container { max-width: 960px; margin: 0 auto; }
+
+    .ancrage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .fondatrice-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .fondatrice-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.8rem;
+    }
+
+    .fondatrice-badge {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terre-deep);
+      border: 1px solid rgba(196, 168, 130, 0.4);
+      padding: 0.55rem 1rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .section-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terre);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--nuit);
+      margin-bottom: 1.8rem;
+    }
+
+    .section-title em { font-style: italic; color: var(--terre); }
+
+    .section-text {
+      font-size: 1rem;
+      color: var(--nuit-soft);
+      line-height: 1.9;
+      max-width: 580px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--terre);
+      margin: 2rem 0;
+      opacity: 0.5;
+    }
+
+    .check-list { list-style: none; margin: 0 0 1.6rem; }
+
+    .check-list li {
+      position: relative;
+      padding-left: 1.7rem;
+      margin-bottom: 1rem;
+      font-size: 1.02rem;
+      color: var(--nuit-soft);
+      line-height: 1.7;
+    }
+
+    .check-list li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+      font-size: 0.6rem;
+      color: var(--terre);
+    }
+
+    .article-cta {
+      max-width: 680px;
+      margin: 2.5rem auto 0;
+      padding: 2.5rem;
+      text-align: center;
+      background: var(--creme-deep);
+    }
+
+    .article-cta p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--nuit-soft);
+      margin-bottom: 1.4rem;
+      line-height: 1.6;
+    }
+
+    .article-cta .cta-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      border: 1px solid var(--terre);
+      color: var(--terre);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-primary:hover { background: var(--terre); color: var(--blanc); }
+
+    footer {
+      padding: 2.5rem;
+      text-align: center;
+      background: var(--nuit);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: rgba(247,243,238,0.35);
+    }
+
+    footer span { color: var(--or); }
+    footer a { color: rgba(247,243,238,0.55); text-decoration: none; }
+    footer a:hover { color: var(--or); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .ancrage-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="./" class="nav-logo"><img src="./assets/lumna-logo.png" alt="Lumna Tribu" class="nav-logo-img" /></a>
+    <ul class="nav-links">
+      <li><a href="./">Accueil</a></li>
+      <li><a href="qui-suis-je.html" class="active">Qui suis-je</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="se-reconstruire-apres.html">Se reconstruire</a></li>
+      <li><a href="./blog/">Journal</a></li>
+      <li><a href="./#contact">Nous rejoindre</a></li>
+    </ul>
+  </nav>
+
+  <header class="article-header">
+    <a href="./" class="back-link">← Retour à l'accueil</a>
+    <p class="article-label">Qui suis-je</p>
+    <h1 class="article-title">Une femme qui<br><em>a vécu ce qu'elle soigne.</em></h1>
+    <p class="article-meta">Lumna Tribu · Alizée Bonillo, fondatrice</p>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="ancrage-grid">
+        <div class="fondatrice-photo reveal">
+          <img src="assets/alizee-photo.jpg" alt="Alizée Bonillo, infirmière diplômée d'État et fondatrice de Lumna Tribu" />
+        </div>
+        <div class="reveal">
+          <p class="section-text">
+            Je m'appelle Alizée Bonillo. Infirmière diplômée d'État depuis 2019, j'ai commencé mon parcours
+            en réanimation pédiatrique, avant de me tourner vers la prévention santé. Deux univers
+            différents, mais un même fil rouge&nbsp;: prendre soin, vraiment, au-delà des gestes techniques.
+          </p>
+          <br/>
+          <p class="section-text">
+            Il y a quelques années, j'ai traversé une période de ma vie qui a tout bousculé. En avançant,
+            j'ai compris une chose&nbsp;: je n'étais pas seule. Beaucoup de femmes vivent, à un moment ou
+            un autre, des épreuves similaires — souvent en silence, souvent démunies.
+          </p>
+          <br/>
+          <p class="section-text">
+            La parole se libère, et c'est une bonne nouvelle. Mais nommer ne suffit pas toujours. Il existe
+            un espace que même les structures les plus essentielles ne peuvent pas toujours offrir&nbsp;:
+            le temps de déposer, un lieu sûr, un lien vrai avec d'autres qui comprennent sans qu'on ait
+            besoin de tout expliquer. C'est cet espace que j'ai voulu créer avec Lumna Tribu.
+          </p>
+          <div class="fondatrice-badges">
+            <span class="fondatrice-badge">Infirmière diplômée d'État</span>
+            <span class="fondatrice-badge">Maman</span>
+            <span class="fondatrice-badge">Fondatrice de Lumna Tribu</span>
+          </div>
+          <p class="section-text" style="margin-top:1.2rem;">
+            <a href="https://www.instagram.com/alizeebonillo" target="_blank" rel="noopener" style="color:var(--terre); text-decoration:none; border-bottom:1px solid rgba(196,168,130,0.4);">
+              Suivre le parcours d'Alizée Bonillo →
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="max-width:680px;">
+      <p class="section-label reveal">Ce qui m'anime</p>
+      <h2 class="section-title reveal">Pourquoi <em>Lumna Tribu.</em></h2>
+      <div class="divider"></div>
+      <ul class="check-list reveal">
+        <li>Une approche qui part du corps et de la physiologie du stress, pas d'un discours de développement personnel flou</li>
+        <li>Une double légitimité&nbsp;: la rigueur du soin infirmier et une pratique de soin sonore formée (modelage sonore, bols tibétains, gong)</li>
+        <li>Un espace pensé pour les femmes qui portent beaucoup — mères, aidantes, soignantes — et qui n'ont, le plus souvent, aucun temps dédié à elles</li>
+        <li>La conviction qu'on guérit rarement seule, et qu'un lien vrai avec d'autres femmes fait partie du soin</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="article-cta reveal" style="margin-bottom:4rem;">
+    <p>Envie de découvrir les journées Nagomi ou le programme Parenthèse Entreprise ?</p>
+    <div class="cta-links">
+      <a href="offres.html" class="btn-primary">Voir les offres</a>
+      <a href="mailto:contact@lumnatribu.com" class="btn-primary">Nous écrire</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 <span>Lumna Tribu</span> · Reconnexion. Ancrage. Bienveillance. · <a href="./">Retour à l'accueil</a></p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
